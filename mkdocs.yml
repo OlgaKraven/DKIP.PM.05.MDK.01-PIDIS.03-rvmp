@@ -1,0 +1,54 @@
+site_name: ПИДИС 3 курс 2 семестр
+
+use_directory_urls: false
+
+theme:
+  name: material
+  logo: assets/icons/logo.png
+  favicon: assets/icons/logo.png
+  language: ru
+  features:
+    - content.code.copy     # кнопка "копировать"
+    - content.image.zoom    # zoom картинок
+    - navigation.top        # "наверх"
+    - navigation.tracking   # подсветка активного пункта в правом TOC
+    - toc.follow            # правый TOC следует за прокруткой
+
+plugins:
+  - glightbox
+  - search
+
+nav:
+    - Теория:
+      - HTML и CSS: theory/html_css.md
+      - JavaScript: theory/javascript.md
+      - Серверная часть: theory/server_side.md
+      - Базы данных: theory/databases.md
+    - Описание лабораторных работ: index.md
+    - Лабораторная работа №1: 1.md
+    - Лабораторная работа №2: 2.md
+    - Лабораторная работа №3: 3.md  
+    - Лабораторная работа №4: 4.md
+    - Вопросы для подготовки к экзамену: questions.md
+    - Требования для оформления: requirements.md
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.tasklist
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - assets/js/mermaid-init.js
+
+extra_css:
+  - assets/stylesheets/extra.css

@@ -1,0 +1,3336 @@
+<!DOCTYPE html><html lang="ru" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="2.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/icons/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Лабораторная работа №1 - ПИДИС 3 курс 2 семестр</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="index.html" title="ПИДИС 3 курс 2 семестр" class="md-header__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="assets/icons/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ПИДИС 3 курс 2 семестр
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа №1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="ПИДИС 3 курс 2 семестр" class="md-nav__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="assets/icons/logo.png" alt="logo">
+
+    </a>
+    ПИДИС 3 курс 2 семестр
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Теория
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Теория
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="theory/html_css.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML и CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="theory/javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="theory/server_side.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Серверная часть
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="theory/databases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Базы данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание лабораторных работ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="1.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Общая логика выполнения модуля
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Проектирование базы данных как первый этап
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-full-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Полный стек технологий (Full Stack)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Репозиторий и контроль версий как обязательное требование
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Особенности выполнения в условиях ГЭ (экзамена)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Описание предметной области (что разрабатываем)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Основной функционал системы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Задание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Задание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Общие требования к выполнению
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Предметная область для реализации
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Для выполнения требуется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Необходимые приложения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Запрет
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Решение — Пошаговое выполнение заданияы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Инструкция: работа с индивидуальным репозиторием и коммитами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Инструкция: работа с индивидуальным репозиторием и коммитами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Создание индивидуального репозитория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Первый коммит в начале работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Финальный коммит в конце работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Проектирование и создание базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Проектирование и создание базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Описание задания
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Инструкция по выполнению задания
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Инструкция по выполнению задания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-xampp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1. Запуск окружения XAMPP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2. Создание базы данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3. Проектирование минимальных сущностей (по схеме БД)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.4. Создание таблицы ролей (roles)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.5. Создание таблицы пользователей (users)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-payment_methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.6. Создание таблицы способов оплаты (payment_methods)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#227-application_statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.7. Создание таблицы статусов заявок (application_statuses)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#228-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.8. Создание таблицы заявок (applications)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.9. Создание таблицы отзывов (reviews)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2210-fk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.10. Создание связей (FK) между таблицами
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2211-er-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.11. Создание ER-диаграммы средствами СУБД
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.11. Создание ER-диаграммы средствами СУБД">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-er-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вариант 1. Скриншот ER-диаграммы (рекомендуется)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вариант 2. Экспорт схемы (если доступно)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка результата
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2213-sql-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.13. Создание SQL-дампа базы данных в phpMyAdmin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.13. Создание SQL-дампа базы данных в phpMyAdmin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройки экспорта (рекомендуемый вариант)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выполнение экспорта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка дампа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Использование SQL-дампа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сдача работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2214-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.14. Файлы, которые должны быть сохранены как результат пункта 2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="questions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы для подготовки к экзамену
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="requirements.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Требования для оформления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Общая логика выполнения модуля
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Проектирование базы данных как первый этап
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-full-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Полный стек технологий (Full Stack)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Репозиторий и контроль версий как обязательное требование
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Особенности выполнения в условиях ГЭ (экзамена)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Описание предметной области (что разрабатываем)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Основной функционал системы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Задание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Задание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Общие требования к выполнению
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Предметная область для реализации
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Для выполнения требуется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Необходимые приложения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Запрет
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Решение — Пошаговое выполнение заданияы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Инструкция: работа с индивидуальным репозиторием и коммитами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Инструкция: работа с индивидуальным репозиторием и коммитами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Создание индивидуального репозитория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Первый коммит в начале работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Финальный коммит в конце работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Проектирование и создание базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Проектирование и создание базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Описание задания
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Инструкция по выполнению задания
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Инструкция по выполнению задания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-xampp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1. Запуск окружения XAMPP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2. Создание базы данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3. Проектирование минимальных сущностей (по схеме БД)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.4. Создание таблицы ролей (roles)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.5. Создание таблицы пользователей (users)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-payment_methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.6. Создание таблицы способов оплаты (payment_methods)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#227-application_statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.7. Создание таблицы статусов заявок (application_statuses)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#228-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.8. Создание таблицы заявок (applications)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.9. Создание таблицы отзывов (reviews)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2210-fk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.10. Создание связей (FK) между таблицами
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2211-er-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.11. Создание ER-диаграммы средствами СУБД
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.11. Создание ER-диаграммы средствами СУБД">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-er-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вариант 1. Скриншот ER-диаграммы (рекомендуется)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вариант 2. Экспорт схемы (если доступно)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка результата
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2213-sql-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.13. Создание SQL-дампа базы данных в phpMyAdmin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.13. Создание SQL-дампа базы данных в phpMyAdmin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройки экспорта (рекомендуемый вариант)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выполнение экспорта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка дампа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Использование SQL-дампа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сдача работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2214-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.14. Файлы, которые должны быть сохранены как результат пункта 2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no1">Лабораторная работа №1. Проектирование и разработка информационных систем</h1>
+<h2 id="1">1. Теория</h2>
+<h3 id="11">1.1. Общая логика выполнения модуля</h3>
+<p>Модуль 1 предполагает разработку учебной информационной системы по заданной предметной области. Важно соблюдать правильный порядок действий:</p>
+<ol>
+<li>сначала проектируется и создаётся база данных;</li>
+<li>затем реализуется минимально необходимый интерфейс;</li>
+<li>после этого добавляется серверная логика (бэкенд) и связь с БД;</li>
+<li>результаты фиксируются в репозитории системы контроля версий.</li>
+</ol>
+<p>Ключевой принцип: делаем только то, что нужно для функционала подсистемы, а не пытаемся смоделировать “всю предметную область целиком”.</p>
+<hr>
+<h3 id="12">1.2. Проектирование базы данных как первый этап</h3>
+<p>Разработку приложения необходимо начинать с проектирования и создания базы данных.</p>
+<p>На этом этапе нет необходимости воспроизводить все сущности предметной области — достаточно создать:</p>
+<ul>
+<li>таблицы;</li>
+<li>поля с подходящими типами данных;</li>
+<li>связи, непосредственно относящиеся к разрабатываемой подсистеме и её функционалу.</li>
+</ul>
+<p>Также требуется:</p>
+<ul>
+<li>обязательно создать ER-диаграмму средствами СУБД;</li>
+<li>обеспечить корректные PK / FK;</li>
+<li>определить кратности связей;</li>
+<li>привести структуру к 3НФ (третья нормальная форма), чтобы не было дублирования данных и аномалий.</li>
+</ul>
+<hr>
+<h3 id="13-full-stack">1.3. Полный стек технологий (Full Stack)</h3>
+<p>Информационная система должна быть выполнена с применением полного стека технологий, то есть в проекте должны присутствовать:</p>
+<ul>
+<li>фронтенд (страницы интерфейса пользователя);</li>
+<li>бэкенд (серверная логика, маршруты, обработка запросов);</li>
+<li>база данных (таблицы, связи, справочники);</li>
+<li>объектно-ориентированное программирование (структура кода, функции/классы, логика);</li>
+<li>подключаемые библиотеки и фреймворки.</li>
+</ul>
+<p>То есть нельзя ограничиваться только HTML-страницами или только базой данных — требуется рабочая связка UI → API → DB.</p>
+<hr>
+<h3 id="14">1.4. Репозиторий и контроль версий как обязательное требование</h3>
+<p>Все практические результаты должны быть переданы путём загрузки файлов в индивидуальный репозиторий системы контроля версий.</p>
+<p>Обязательно:</p>
+<ul>
+<li>вести проект в репозитории;</li>
+<li>
+<p>выполнять коммиты как минимум:</p>
+</li>
+<li>
+<p>в начале выполнения модуля;</p>
+</li>
+<li>в завершении выполнения модуля.</li>
+</ul>
+<p>Это подтверждает этапность работы и наличие результата.</p>
+<hr>
+<h3 id="15">1.5. Особенности выполнения в условиях ГЭ (экзамена)</h3>
+<p>В условиях ГЭ действуют организационные ограничения:</p>
+<ol>
+<li>Интернет на рабочих местах участников недоступен.</li>
+<li>Для справки используется офлайн-справочник, доступный на площадке.</li>
+<li>
+<p>Используется общий сервер для:</p>
+</li>
+<li>
+<p>базы данных;</p>
+</li>
+<li>бэкенда;</li>
+<li>хранения и проверки работ участников;</li>
+<li>создания индивидуальных репозиториев.</li>
+<li>Допускается предоставление актуальных библиотек и фреймворков без подключения к интернету — заранее подготовленных и размещённых в публичной папке сервера (доступной на чтение всем участникам экзамена).</li>
+<li>Медиафайлы (приложения к заданию) также размещаются в публичной папке сервера.</li>
+<li>
+<p>Взаимодействие с базой данных участник проверяет в подготовительный день;</p>
+</li>
+<li>
+<p>в день экзамена участник проектирует базу данных самостоятельно.</p>
+</li>
+</ol>
+<hr>
+<h3 id="16">1.6. Описание предметной области (что разрабатываем)</h3>
+<p>Портал «Корочки.есть» — информационная система для записи на онлайн-курсы дополнительного профессионального образования.</p>
+<p>Перед началом использования портала пользователю необходимо пройти процедуру регистрации.</p>
+<p>После входа в систему пользователь может:</p>
+<ul>
+<li>составить заявку на обучение по программе дополнительного профессионального образования;</li>
+<li>указать наименование курса;</li>
+<li>выбрать желаемое время начала обучения;</li>
+<li>указать способ оплаты курса.</li>
+</ul>
+<p>Все заявки пользователей хранятся в базе данных.</p>
+<p>После подачи заявки она поступает на рассмотрение администратору, который проверяет корректность введённых данных и может изменить статус заявки.</p>
+<hr>
+<h3 id="17">1.7. Основной функционал системы</h3>
+<p>По заданию реализуются следующие страницы и сценарии:</p>
+<ol>
+<li>
+<p>Страница регистрации</p>
+<ul>
+<li>логин (латиница и цифры, не менее 6 символов);</li>
+<li>пароль (не менее 8 символов);</li>
+<li>ФИО (кириллица и пробелы);</li>
+<li>телефон (<code>8(XXX)XXX-XX-XX</code>);</li>
+<li>email (формат электронной почты).
+Все поля обязательны. Кнопка «Создать пользователя» заносит данные в БД.</li>
+</ul>
+</li>
+<li>
+<p>Страница авторизации</p>
+<ul>
+<li>ввод логина и пароля;</li>
+<li>ошибки при неверном вводе;</li>
+<li>
+<p>переходы между регистрацией и авторизацией:</p>
+<ul>
+<li>«Еще не зарегистрированы? Регистрация»</li>
+<li>«Уже зарегистрированы? Войти»</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Страница просмотра заявок</p>
+<ul>
+<li>просмотр ранее оставленных заявок (для авторизованного пользователя);</li>
+<li>возможность оставить отзыв о качестве образовательных услуг.</li>
+</ul>
+</li>
+<li>
+<p>Страница формирования заявки
+   Пользователь указывает:</p>
+<ul>
+<li>наименование курса;</li>
+<li>желаемую дату начала обучения;</li>
+<li>
+<p>способ оплаты:</p>
+<ul>
+<li>наличными;</li>
+<li>переводом по номеру телефона.
+    После нажатия «Отправить» заявка сохраняется в БД и направляется администратору.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Панель администратора
+   Доступ:</p>
+<ul>
+<li>логин: <code>Admin</code></li>
+<li>пароль: <code>KorokNET</code></li>
+</ul>
+</li>
+</ol>
+<p>Админ видит все заявки пользователей и может менять статусы:</p>
+<ul>
+<li>«Новая»</li>
+<li>«Идёт обучение»</li>
+<li>«Обучение завершено»</li>
+</ul>
+<hr>
+<h2 id="2">2. Задание</h2>
+<h3 id="21">2.1. Общие требования к выполнению</h3>
+<ol>
+<li>Начать разработку приложения с проектирования и создания базы данных.</li>
+<li>Создать только минимально необходимые сущности и связи, относящиеся к функционалу подсистемы.</li>
+<li>Обязательно создать ER-диаграмму средствами СУБД.</li>
+<li>Реализовать минимально необходимый интерфейс (страницы по заданию).</li>
+<li>Реализовать связку полного стека технологий (frontend + backend + DB + ООП + библиотеки).</li>
+<li>Все результаты загрузить в индивидуальный репозиторий и сделать минимум два коммита: стартовый и финальный.</li>
+</ol>
+<hr>
+<h3 id="22">2.2. Предметная область для реализации</h3>
+<p>Система: Портал “Корочки.есть” (запись на онлайн-курсы).</p>
+<p>Нужно обеспечить:</p>
+<ul>
+<li>регистрацию пользователя;</li>
+<li>авторизацию;</li>
+<li>формирование заявок;</li>
+<li>просмотр заявок;</li>
+<li>отзывы;</li>
+<li>панель администратора со сменой статуса заявок.</li>
+</ul>
+<hr>
+<h3 id="23">2.3. Для выполнения требуется</h3>
+<ol>
+<li>Шаблон отчёта, указанный в описании лабораторной работы.</li>
+<li>Вариант задания, закреплённый за студентом на семестр и опубликованный в ЛМС.</li>
+<li>Требования к оформлению — согласно методическим указаниям в ЛМС или соответствующему разделу документации.</li>
+<li>Для построения диаграмм использовать draw.io (diagrams.net) (или ER-Designer в СУБД по заданию).</li>
+<li>Для разработки БД и тестирования использовать окружение (в примере): XAMPP (Apache + MySQL + PHP + FTP).</li>
+</ol>
+<hr>
+<h3 id="24">2.4. Необходимые приложения</h3>
+<ul>
+<li><code>Прил_ОЗ_КОД 09.02.07-3-2026-М1.zip</code></li>
+</ul>
+<p>👉 <a href="../assets/files//Прил_ОЗ_КОД%2009.02.07-3-2026-М1.zip">Приложение к модулю 1</a></p>
+<hr>
+<h3 id="25">2.5. Запрет</h3>
+<p>❗ Запрещается использование систем искусственного интеллекта для выполнения работы.</p>
+<p>Работы, выполненные с использованием ИИ, полностью или частично скопированные, а также не сданные, оцениваются в 0 баллов без возможности доработки.</p>
+<hr>
+<h2 id="3">3. Решение — Пошаговое выполнение заданияы</h2>
+<h2 id="1_1">1. Инструкция: работа с индивидуальным репозиторием и коммитами</h2>
+<h3 id="11_1">1.1. Создание индивидуального репозитория</h3>
+<ol>
+<li>В 0 день будет возможность ознакомится с системой контроля версии Git установленной на площадке.</li>
+<li>Откройте систему контроля версий, используемую в учебном процессе (Git).</li>
+<li>Создайте новый репозиторий для выполнения модуля.</li>
+<li>Укажите название репозитория (например, по теме модуля или проекту).</li>
+<li>Убедитесь, что репозиторий создан индивидуально и доступен для проверки преподавателем/экзаменатором.</li>
+</ol>
+<hr>
+<h3 id="12_1">1.2. Первый коммит в начале работы</h3>
+<ol>
+<li>Склонируйте созданный репозиторий на рабочий компьютер.</li>
+<li>Создайте базовую структуру проекта (папки и/или файлы).</li>
+<li>Добавьте изменения в индекс:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<ol>
+<li>Выполните первый коммит:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Начало работы над модулем 1"</span>
+</code></pre></div>
+<ol>
+<li>Отправьте изменения в репозиторий:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push
+</code></pre></div>
+<hr>
+<h3 id="13">1.3. Финальный коммит в конце работы</h3>
+<ol>
+<li>
+<p>Убедитесь, что в репозитории присутствуют все файлы проекта:</p>
+</li>
+<li>
+<p>исходные коды;</p>
+</li>
+<li>файлы базы данных;</li>
+<li>ER-диаграмма;</li>
+<li>
+<p>вспомогательные материалы (если предусмотрены заданием).</p>
+</li>
+<li>
+<p>Узнать статус созданных/измененных файлов</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+</code></pre></div>
+<ol>
+<li>Добавьте все изменения:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div>
+<ol>
+<li>Выполните финальный коммит:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Завершение выполнения модуля 1"</span>
+</code></pre></div>
+<ol>
+<li>Отправьте финальный коммит в репозиторий:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push
+</code></pre></div>
+<p>После выполнения этих шагов репозиторий считается готовым к проверке.</p>
+<hr>
+<h2 id="2_1">2. Проектирование и создание базы данных</h2>
+<blockquote>
+<p>Для выполнения используется XAMPP (Apache + MySQL + PHP + FTP)</p>
+</blockquote>
+<h3 id="21_1">2.1. Описание задания</h3>
+<ol>
+<li>
+<p>Спроектировать минимально необходимые сущности для функционала:</p>
+</li>
+<li>
+<p>пользователи (регистрация/вход);</p>
+</li>
+<li>
+<p>заявки на обучение;</p>
+</li>
+<li>
+<p>Создать в СУБД:</p>
+</li>
+<li>
+<p>таблицы;</p>
+</li>
+<li>поля с подходящими типами данных;</li>
+<li>
+<p>связи между таблицами, относящиеся к функционалу.</p>
+</li>
+<li>
+<p>Обязательно сделать ER-диаграмму средствами СУБД и сохранить её (экспорт/скриншот).</p>
+</li>
+</ol>
+<hr>
+<h3 id="22_1">2.2. Инструкция по выполнению задания</h3>
+<h4 id="221-xampp">2.2.1. Запуск окружения XAMPP</h4>
+<ol>
+<li>Запустите XAMPP Control Panel.</li>
+<li>
+<p>Нажмите Start для модулей:</p>
+</li>
+<li>
+<p>Apache</p>
+</li>
+<li>MySQL</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/1.png" data-desc-position="bottom"><img alt="Запуск программы" src="../assets/images/1.png"></a></p>
+<figcaption>
+<p>Рисунок 1 - Запуск программы</p>
+</figcaption>
+</figure>
+<ol>
+<li>
+<p>Откройте в браузере:</p>
+</li>
+<li>
+<p><code>http://localhost/phpmyadmin</code></p>
+</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/2.png" data-desc-position="bottom"><img alt="phpmyadmin" src="../assets/images/2.png"></a></p>
+<figcaption>
+<p>Рисунок 2 - Phpmyadmin</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="222">2.2.2. Создание базы данных</h4>
+<ol>
+<li>В phpMyAdmin откройте вкладку Базы данных.</li>
+<li>В поле Создать базу данных введите имя, например: <code>korochki</code>.</li>
+<li>Выберите кодировку utf8mb4_general_ci.</li>
+<li>Нажмите Создать.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/3.png" data-desc-position="bottom"><img alt="Создание базы данных" src="../assets/images/3.png"></a></p>
+<figcaption>
+<p>Рисунок 3 - Создание базы данных</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="223">2.2.3. Проектирование минимальных сущностей (по схеме БД)</h4>
+<p>По заданию используются основные сущности и справочники (3НФ):</p>
+<ul>
+<li>Пользователи <code>users</code> — регистрация/авторизация.</li>
+<li>Заявки <code>applications</code> — создание и хранение заявок пользователя.</li>
+<li>
+<p>Справочники:</p>
+</li>
+<li>
+<p><code>roles</code> — роли пользователей (user/admin);</p>
+</li>
+<li><code>payment_methods</code> — способы оплаты;</li>
+<li><code>application_statuses</code> — статусы заявок.</li>
+<li>Отзывы <code>reviews</code> — хранение отзывов пользователей.</li>
+</ul>
+<hr>
+<h4 id="224-roles">2.2.4. Создание таблицы ролей (roles)</h4>
+<ol>
+<li>Откройте базу <code>korochki</code>.</li>
+<li>Нажмите Создать таблицу.</li>
+<li>Имя таблицы: <code>roles</code>, количество столбцов: 2 → Вперёд.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/4.png" data-desc-position="bottom"><img alt="Создание таблицы ролей" src="../assets/images/4.png"></a></p>
+<figcaption>
+<p>Рисунок 4 - Создание таблицы ролей</p>
+</figcaption>
+</figure>
+<ol>
+<li>Создайте поля:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Атрибуты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>INT</td>
+<td>PRIMARY KEY, AUTO_INCREMENT</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VARCHAR(30)</td>
+<td>NOT NULL, UNIQUE</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Нажмите Сохранить.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/5.png" data-desc-position="bottom"><img alt="Создание полей" src="../assets/images/5.png"></a></p>
+<figcaption>
+<p>Рисунок 5 - Создание полей</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="225-users">2.2.5. Создание таблицы пользователей (users)</h4>
+<ol>
+<li>В базе <code>korochki</code> нажмите Создать таблицу.</li>
+<li>Имя таблицы: <code>users</code>, количество столбцов: 8 → Вперёд.</li>
+<li>Создайте поля:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Атрибуты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>INT</td>
+<td>PRIMARY KEY, AUTO_INCREMENT</td>
+</tr>
+<tr>
+<td><code>login</code></td>
+<td>VARCHAR(50)</td>
+<td>NOT NULL, UNIQUE</td>
+</tr>
+<tr>
+<td><code>password_hash</code></td>
+<td>VARCHAR(255)</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>full_name</code></td>
+<td>VARCHAR(200)</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>VARCHAR(20)</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>VARCHAR(120)</td>
+<td>NOT NULL, UNIQUE</td>
+</tr>
+<tr>
+<td><code>role_id</code></td>
+<td>INT</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>TIMESTAMP</td>
+<td>DEFAULT CURRENT_TIMESTAMP</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Нажмите Сохранить.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/6.png" data-desc-position="bottom"><img alt="Создание таблицы пользователей" src="../assets/images/6.png"></a></p>
+<figcaption>
+<p>Рисунок 6 - Создание таблицы пользователей</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="226-payment_methods">2.2.6. Создание таблицы способов оплаты (payment_methods)</h4>
+<ol>
+<li>В базе <code>korochki</code> нажмите Создать таблицу.</li>
+<li>Имя таблицы: <code>payment_methods</code>, количество столбцов: 2 → Вперёд.</li>
+<li>Создайте поля:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Атрибуты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>INT</td>
+<td>PRIMARY KEY, AUTO_INCREMENT</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VARCHAR(50)</td>
+<td>NOT NULL, UNIQUE</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Нажмите Сохранить.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/7.png" data-desc-position="bottom"><img alt="Создание таблицы способов оплаты" src="../assets/images/7.png"></a></p>
+<figcaption>
+<p>Рисунок 7 - Создание таблицы способов оплаты</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="227-application_statuses">2.2.7. Создание таблицы статусов заявок (application_statuses)</h4>
+<ol>
+<li>В базе <code>korochki</code> нажмите Создать таблицу.</li>
+<li>Имя таблицы: <code>application_statuses</code>, количество столбцов: 2 → Вперёд.</li>
+<li>Создайте поля:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Атрибуты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>INT</td>
+<td>PRIMARY KEY, AUTO_INCREMENT</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VARCHAR(50)</td>
+<td>NOT NULL, UNIQUE</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Нажмите Сохранить.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/8.png" data-desc-position="bottom"><img alt="Создание таблицы статусов заявок" src="../assets/images/8.png"></a></p>
+<figcaption>
+<p>Рисунок 8 - Создание таблицы статусов заявок</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="228-applications">2.2.8. Создание таблицы заявок (applications)</h4>
+<ol>
+<li>В базе <code>korochki</code> нажмите Создать таблицу.</li>
+<li>Имя таблицы: <code>applications</code>, количество столбцов: 7 → Вперёд.</li>
+<li>Создайте поля:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Атрибуты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>INT</td>
+<td>PRIMARY KEY, AUTO_INCREMENT</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td>INT</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>course_name</code></td>
+<td>VARCHAR(200)</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>start_date</code></td>
+<td>DATE</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>payment_method_id</code></td>
+<td>INT</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>status_id</code></td>
+<td>INT</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>TIMESTAMP</td>
+<td>DEFAULT CURRENT_TIMESTAMP</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Нажмите Сохранить.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/9.png" data-desc-position="bottom"><img alt="Создание таблицы заявок" src="../assets/images/9.png"></a></p>
+<figcaption>
+<p>Рисунок 9 - Создание таблицы заявок</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="229-reviews">2.2.9. Создание таблицы отзывов (reviews)</h4>
+<ol>
+<li>В базе <code>korochki</code> нажмите Создать таблицу.</li>
+<li>Имя таблицы: <code>reviews</code>, количество столбцов: 4 → Вперёд.</li>
+<li>Создайте поля:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Атрибуты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>INT</td>
+<td>PRIMARY KEY, AUTO_INCREMENT</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td>INT</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>TEXT</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>TIMESTAMP</td>
+<td>DEFAULT CURRENT_TIMESTAMP</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Нажмите Сохранить.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/10.png" data-desc-position="bottom"><img alt="Создание таблицы отзывов" src="../assets/images/10.png"></a></p>
+<figcaption>
+<p>Рисунок 10 - Создание таблицы отзывов</p>
+</figcaption>
+</figure>
+<hr>
+<h4 id="2210-fk">2.2.10. Создание связей (FK) между таблицами</h4>
+<ol>
+<li>Откройте таблицу <code>users</code> → вкладка Структура → Связи (Relation view):</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/11.png" data-desc-position="bottom"><img alt="Структура → Связи (Relation view)" src="../assets/images/11.png"></a></p>
+<figcaption>
+<p>Рисунок 11 - Структура → Связи (Relation view)</p>
+</figcaption>
+</figure>
+<ul>
+<li>
+<p>поле <code>role_id</code>:</p>
+</li>
+<li>
+<p>Таблица: <code>roles</code></p>
+</li>
+<li>Поле: <code>id</code></li>
+<li>
+<p>Действия:</p>
+</li>
+<li>
+<p>ON DELETE: <code>RESTRICT</code></p>
+</li>
+<li>ON UPDATE: <code>CASCADE</code></li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/12.png" data-desc-position="bottom"><img alt="Выставление настроек в таблице users" src="../assets/images/12.png"></a></p>
+<figcaption>
+<p>Рисунок 12 - Выставление настроек в таблице users</p>
+</figcaption>
+</figure>
+<ol>
+<li>
+<p>Откройте таблицу <code>applications</code> → Связи (Relation view):</p>
+</li>
+<li>
+<p>поле <code>user_id</code>:</p>
+</li>
+<li>
+<p>Таблица: <code>users</code></p>
+</li>
+<li>Поле: <code>id</code></li>
+<li>ON DELETE: <code>CASCADE</code></li>
+<li>ON UPDATE: <code>CASCADE</code></li>
+<li>
+<p>поле <code>payment_method_id</code>:</p>
+</li>
+<li>
+<p>Таблица: <code>payment_methods</code></p>
+</li>
+<li>Поле: <code>id</code></li>
+<li>ON DELETE: <code>RESTRICT</code></li>
+<li>ON UPDATE: <code>CASCADE</code></li>
+<li>
+<p>поле <code>status_id</code>:</p>
+</li>
+<li>
+<p>Таблица: <code>application_statuses</code></p>
+</li>
+<li>Поле: <code>id</code></li>
+<li>ON DELETE: <code>RESTRICT</code></li>
+<li>ON UPDATE: <code>CASCADE</code></li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/13.png" data-desc-position="bottom"><img alt="Выставление настроек в таблице applications" src="../assets/images/13.png"></a></p>
+<figcaption>
+<p>Рисунок 13 - Выставление настроек в таблице applications</p>
+</figcaption>
+</figure>
+<ol>
+<li>
+<p>Откройте таблицу <code>reviews</code> → Связи (Relation view):</p>
+</li>
+<li>
+<p>поле <code>user_id</code>:</p>
+</li>
+<li>
+<p>Таблица: <code>users</code></p>
+</li>
+<li>Поле: <code>id</code></li>
+<li>ON DELETE: <code>CASCADE</code></li>
+<li>ON UPDATE: <code>CASCADE</code></li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/14.png" data-desc-position="bottom"><img alt="Выставление настроек в таблице reviews" src="../assets/images/14.png"></a></p>
+<figcaption>
+<p>Рисунок 14 - Выставление настроек в таблице reviews</p>
+</figcaption>
+</figure>
+<blockquote>
+<p>Не забудьте внести тестовые данные, чтобы можно было попробовать работу БД</p>
+</blockquote>
+<hr>
+<h4 id="2211-er-">2.2.11. Создание ER-диаграммы средствами СУБД</h4>
+<ol>
+<li>В phpMyAdmin откройте базу данных <code>korochki</code>.</li>
+<li>Перейдите на вкладку Designer (Конструктор/Дизайнер).</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/15.png" data-desc-position="bottom"><img alt="Создание ER-диаграммы средствами СУБД" src="../assets/images/15.png"></a></p>
+<figcaption>
+<p>Рисунок 15 - Создание ER-диаграммы средствами СУБД</p>
+</figcaption>
+</figure>
+<ol>
+<li>
+<p>Убедитесь, что на схеме отображаются таблицы:</p>
+</li>
+<li>
+<p><code>roles</code> → <code>users</code></p>
+</li>
+<li><code>users</code> → <code>applications</code></li>
+<li><code>payment_methods</code> → <code>applications</code></li>
+<li><code>application_statuses</code> → <code>applications</code></li>
+<li>
+<p><code>users</code> → <code>reviews</code></p>
+</li>
+<li>
+<p>Сохраните результат:</p>
+</li>
+<li>
+<p>сделайте скриншот диаграммы
+  или</p>
+</li>
+<li>экспортируйте схему, если доступно.</li>
+</ol>
+<h5 id="1-er-">Вариант 1. Скриншот ER-диаграммы (рекомендуется)</h5>
+<ol>
+<li>Отмасштабируйте диаграмму так, чтобы все таблицы и связи были видны на экране.</li>
+<li>
+<p>Выполните скриншот экрана:</p>
+</li>
+<li>
+<p>Windows: <code>Win + Shift + S</code></p>
+</li>
+<li>macOS: <code>Cmd + Shift + 4</code></li>
+<li>
+<p>Linux: стандартное средство создания снимков экрана</p>
+</li>
+<li>
+<p>Сохраните изображение:</p>
+</li>
+<li>
+<p>формат: <code>PNG</code> или <code>JPG</code></p>
+</li>
+<li>рекомендуемое имя файла: <code>er-diagram-korochki.png</code></li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/er-diagram-korochki.png" data-desc-position="bottom"><img alt="Скриншот ER-диаграммы" src="../assets/images/er-diagram-korochki.png"></a></p>
+<figcaption>
+<p>Рисунок 16 - Скриншот ER-диаграммы</p>
+</figcaption>
+</figure>
+<h5 id="2_2">Вариант 2. Экспорт схемы (если доступно)</h5>
+<ol>
+<li>В режиме Designer нажмите кнопку Export / Экспорт (если она доступна в вашей версии phpMyAdmin).</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/16.png" data-desc-position="bottom"><img alt="Экспорт схемы" src="../assets/images/16.png"></a></p>
+<figcaption>
+<p>Рисунок 17 - Экспорт схемы</p>
+</figcaption>
+</figure>
+<ol>
+<li>Выберите формат экспорта (обычно <code>PNG</code> или <code>PDF</code>).</li>
+<li>Сохраните файл с именем, например: <code>er-diagram-korochki.pdf</code>.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/17.png" data-desc-position="bottom"><img alt="Выберите формат экспорта" src="../assets/images/17.png"></a></p>
+<figcaption>
+<p>Рисунок 18 - Выберите формат экспорта</p>
+</figcaption>
+</figure>
+<hr>
+<h5 id="_1">Проверка результата</h5>
+<ol>
+<li>
+<p>Откройте сохранённый файл и убедитесь, что:</p>
+</li>
+<li>
+<p>видны названия всех таблиц;</p>
+</li>
+<li>видны поля с ключами (PK, FK);</li>
+<li>отображены линии связей между таблицами.</li>
+</ol>
+<iframe src="../assets/files//korochki.pdf" width="100%" height="800px"></iframe>
+
+<p>👉 <a href="../assets/files//korochki.pdf">Скачать пример экспорта</a></p>
+<ol>
+<li>Добавьте файл со скриншотом или экспортом ER-диаграммы в репозиторий проекта (папка <code>db/</code>) и зафиксируйте изменения коммитом.</li>
+</ol>
+<hr>
+<h4 id="2213-sql-phpmyadmin">2.2.13. Создание SQL-дампа базы данных в phpMyAdmin</h4>
+<ol>
+<li>Откройте phpMyAdmin (<code>http://localhost/phpmyadmin</code>).</li>
+<li>В левой панели выберите базу данных <code>korochki</code>.</li>
+<li>В верхнем меню перейдите на вкладку Экспорт.</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/18.png" data-desc-position="bottom"><img alt="Создание SQL-дампа базы данных в phpMyAdmin" src="../assets/images/18.png"></a></p>
+<figcaption>
+<p>Рисунок 19 - Создание SQL-дампа базы данных в phpMyAdmin</p>
+</figcaption>
+</figure>
+<h5 id="_2">Настройки экспорта (рекомендуемый вариант)</h5>
+<ol>
+<li>В разделе Метод экспорта выберите Быстро.</li>
+<li>В разделе Формат выберите SQL.</li>
+<li>Убедитесь, что опция Экспорт структуры и данных включена.</li>
+</ol>
+<h5 id="_3">Выполнение экспорта</h5>
+<ol>
+<li>Нажмите Экспорт (или Вперёд).</li>
+<li>
+<p>Сохраните файл:</p>
+</li>
+<li>
+<p>формат: <code>.sql</code></p>
+</li>
+<li>имя: <code>korochki.sql</code></li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/images/19.png" data-desc-position="bottom"><img alt="Выполнение экспорта" src="../assets/images/19.png"></a></p>
+<figcaption>
+<p>Рисунок 20 - Выполнение экспорта</p>
+</figcaption>
+</figure>
+<p>👉 <a href="../assets/files//korochki.sql">Скачать пример экспорта</a></p>
+<h5 id="_4">Проверка дампа</h5>
+<ol>
+<li>Откройте <code>korochki.sql</code> в редакторе.</li>
+<li>
+<p>Убедитесь, что в файле есть:</p>
+</li>
+<li>
+<p><code>CREATE DATABASE korochki</code></p>
+</li>
+<li><code>CREATE TABLE</code> для всех таблиц</li>
+<li><code>INSERT INTO</code> для справочников и тестовых данных (если есть)</li>
+</ol>
+<h5 id="sql-">Использование SQL-дампа</h5>
+<ol>
+<li>
+<p>Для восстановления базы:</p>
+</li>
+<li>
+<p>открыть phpMyAdmin</p>
+</li>
+<li>создать/выбрать БД</li>
+<li>вкладка Импорт</li>
+<li>выбрать файл <code>korochki.sql</code></li>
+<li>нажать Вперёд</li>
+</ol>
+<h5 id="_5">Сдача работы</h5>
+<ol>
+<li>Добавьте <code>korochki.sql</code> в репозиторий (папка <code>db/</code>).</li>
+<li>Зафиксируйте изменения коммитом.</li>
+</ol>
+<hr>
+<h4 id="2214-21">2.2.14. Файлы, которые должны быть сохранены как результат пункта 2.1</h4>
+<p>Скриншот/экспорт ER-диаграммы</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+
+  ROLES {
+    INT id PK
+    VARCHAR name UK
+  }
+
+  USERS {
+    INT id PK
+    VARCHAR login UK
+    VARCHAR password_hash
+    VARCHAR full_name
+    VARCHAR phone
+    VARCHAR email UK
+    INT role_id FK
+    TIMESTAMP created_at
+  }
+
+  PAYMENT_METHODS {
+    INT id PK
+    VARCHAR name UK
+  }
+
+  APPLICATION_STATUSES {
+    INT id PK
+    VARCHAR name UK
+  }
+
+  APPLICATIONS {
+    INT id PK
+    INT user_id FK
+    VARCHAR course_name
+    DATE start_date
+    INT payment_method_id FK
+    INT status_id FK
+    TIMESTAMP created_at
+  }
+
+  REVIEWS {
+    INT id PK
+    INT user_id FK
+    TEXT text
+    TIMESTAMP created_at
+  }
+
+  ROLES ||--o{ USERS : "role_id"
+  USERS ||--o{ APPLICATIONS : "user_id"
+  PAYMENT_METHODS ||--o{ APPLICATIONS : "payment_method_id"
+  APPLICATION_STATUSES ||--o{ APPLICATIONS : "status_id"
+  USERS ||--o{ REVIEWS : "user_id"</code></pre>
+<figcaption>
+<p>Рисунок 20 - Пример диаграммы созданной через mermaid</p>
+</figcaption>
+</figure>
+<p>Пример дампа базы</p>
+<div class="highlight"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">korochki</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">korochki</span><span class="w"> </span><span class="nb">CHARACTER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">utf8mb4</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8mb4_general_ci</span><span class="p">;</span>
+<span class="n">USE</span><span class="w"> </span><span class="n">korochki</span><span class="p">;</span>
+
+<span class="c1">-- 1) Роли (таблица-справочник)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">roles</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w">   </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="c1">-- 2) Пользователи (role_id -&gt; roles.id)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w">            </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">login</span><span class="w">         </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w">  </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">password_hash</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">full_name</span><span class="w">     </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">phone</span><span class="w">         </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w">  </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">email</span><span class="w">         </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">role_id</span><span class="w">       </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w">    </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_users_role</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">role_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">roles</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CASCADE</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">RESTRICT</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="c1">-- 3) Способы оплаты (таблица-справочник)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">payment_methods</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w">   </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="c1">-- 4) Статусы заявок (таблица-справочник)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">application_statuses</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w">   </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="c1">-- 5) Заявки (payment_method_id -&gt; payment_methods.id, status_id -&gt; application_statuses.id)</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">applications</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w">                </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">user_id</span><span class="w">           </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">course_name</span><span class="w">       </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">start_date</span><span class="w">        </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">payment_method_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">status_id</span><span class="w">         </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w">        </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_app_user</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CASCADE</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_app_payment</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">payment_method_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">payment_methods</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CASCADE</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">RESTRICT</span><span class="p">,</span>
+
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_app_status</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">status_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">application_statuses</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CASCADE</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">RESTRICT</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="c1">-- 6) Отзывы</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">reviews</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w">         </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">user_id</span><span class="w">    </span><span class="nb">INT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="nb">text</span><span class="w">       </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_reviews_user</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CASCADE</span>
+<span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="c1">-- Заполнение справочников под задание</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">roles</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'user'</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s1">'admin'</span><span class="p">);</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">payment_methods</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">'Наличными'</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">'Переводом по номеру телефона'</span><span class="p">);</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">application_statuses</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">'Новая'</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">'Идёт обучение'</span><span class="p">),</span>
+<span class="w">  </span><span class="p">(</span><span class="s1">'Обучение завершено'</span><span class="p">);</span>
+
+<span class="c1">-- Администратор по заданию (пароль хранить хэшем; здесь заглушка)</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">login</span><span class="p">,</span><span class="w"> </span><span class="n">password_hash</span><span class="p">,</span><span class="w"> </span><span class="n">full_name</span><span class="p">,</span><span class="w"> </span><span class="n">phone</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">role_id</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="s1">'Admin'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'KorokNET'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'Администратор'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'8(000)000-00-00'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'admin@korochki.local'</span><span class="p">,</span>
+<span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">roles</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s1">'admin'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr>
+<p>Ниже приведён полный блок 3.1–6, оформленный в том же формате, что и предыдущие разделы:
+структурированные заголовки, подпункты, инструкции, код, ссылки на файлы — без сокращений содержания.</p>
+<hr>
+<h1 id="3_1">3. Реализация минимального интерфейса (полный стек)</h1>
+<p>Информационная система должна быть реализована с использованием:</p>
+<ul>
+<li>фронтенд (HTML, CSS, JS);</li>
+<li>бэкенд (Flask);</li>
+<li>база данных (MySQL);</li>
+<li>объектно-ориентированная структура кода;</li>
+<li>подключаемые библиотеки (<code>flask</code>, <code>flask-cors</code>, <code>pymysql</code>).</li>
+</ul>
+<hr>
+<h2 id="31">3.1. Страница регистрации</h2>
+<h3 id="311">3.1.1. Описание страницы регистрации</h3>
+<p>Форма должна содержать обязательные поля:</p>
+<ul>
+<li>логин — латиница и цифры, не менее 6 символов;</li>
+<li>пароль — не менее 8 символов;</li>
+<li>ФИО — кириллица и пробелы;</li>
+<li>телефон — формат <code>8(XXX)XXX-XX-XX</code>;</li>
+<li>email — корректный формат электронной почты.</li>
+</ul>
+<p>Кнопка «Создать пользователя»:</p>
+<ul>
+<li>выполняет валидацию;</li>
+<li>отправляет данные на сервер;</li>
+<li>данные заносятся в базу данных.</li>
+</ul>
+<hr>
+<h3 id="312-frontend">3.1.2. Структура проекта (frontend)</h3>
+<p>Создать папку:</p>
+<div class="highlight"><pre><span></span><code>frontend/
+</code></pre></div>
+<p>Создать файл:</p>
+<div class="highlight"><pre><span></span><code>frontend/register.html
+</code></pre></div>
+<hr>
+<h3 id="313-frontendregisterhtml">3.1.3. Файл <code>frontend/register.html</code></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Регистрация — Корочки.есть<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/styles.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Регистрация<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"regForm"</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Логин<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"login"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">required</span> <span class="na">minlength</span><span class="o">=</span><span class="s">"6"</span>
+             <span class="na">pattern</span><span class="o">=</span><span class="s">"^[A-Za-z0-9]{6,}$"</span>
+             <span class="na">placeholder</span><span class="o">=</span><span class="s">"Латиница и цифры"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Пароль<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"password"</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">required</span> <span class="na">minlength</span><span class="o">=</span><span class="s">"8"</span>
+             <span class="na">placeholder</span><span class="o">=</span><span class="s">"Минимум 8 символов"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>ФИО<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"full_name"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">required</span>
+             <span class="na">pattern</span><span class="o">=</span><span class="s">"^[А-Яа-яЁё\s]+$"</span>
+             <span class="na">placeholder</span><span class="o">=</span><span class="s">"Кириллица и пробелы"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Телефон<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"phone"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">required</span>
+             <span class="na">pattern</span><span class="o">=</span><span class="s">"^8\(\d{3}\)\d{3}-\d{2}-\d{2}$"</span>
+             <span class="na">placeholder</span><span class="o">=</span><span class="s">"8(XXX)XXX-XX-XX"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Email<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"email"</span> <span class="na">type</span><span class="o">=</span><span class="s">"email"</span> <span class="na">required</span>
+             <span class="na">placeholder</span><span class="o">=</span><span class="s">"name@example.com"</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"actions"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Создать пользователя<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"msg"</span> <span class="na">class</span><span class="o">=</span><span class="s">"msg"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/login"</span><span class="p">&gt;</span>Уже зарегистрированы? Войти<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"regForm"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"msg"</span><span class="p">);</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">msg</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">form</span><span class="p">.</span><span class="nx">checkValidity</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">msg</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Проверьте корректность заполнения."</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">login</span><span class="o">:</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">login</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">password</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">full_name</span><span class="o">:</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">full_name</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">phone</span><span class="o">:</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">phone</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">email</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">"http://127.0.0.1:5000/api/register"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"Content-Type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">msg</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">error</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">"Ошибка регистрации."</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">msg</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"msg error"</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">msg</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Пользователь создан."</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">msg</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"msg ok"</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">form</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">msg</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Ошибка подключения к серверу."</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">msg</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"msg error"</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="32">3.2. Страница авторизации</h2>
+<h3 id="321">3.2.1. Описание страницы</h3>
+<ul>
+<li>ввод логина и пароля;</li>
+<li>проверка на сервере;</li>
+<li>сохранение <code>user_id</code> и <code>role</code> в <code>localStorage</code>;</li>
+<li>переходы между страницами регистрации и входа.</li>
+</ul>
+<hr>
+<h3 id="322-frontendloginhtml">3.2.2. Файл <code>frontend/login.html</code></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Авторизация — Корочки.есть<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/styles.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Авторизация<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"loginForm"</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Логин<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"login"</span> <span class="na">required</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Пароль<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"password"</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">required</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"actions"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Войти<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"msg"</span> <span class="na">class</span><span class="o">=</span><span class="s">"msg"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/register"</span><span class="p">&gt;</span>Еще не зарегистрированы? Регистрация<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"loginForm"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"msg"</span><span class="p">);</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">"http://127.0.0.1:5000/api/login"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"Content-Type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">login</span><span class="o">:</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">login</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">password</span><span class="p">.</span><span class="nx">value</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">msg</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">error</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">msg</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"msg error"</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">"user_id"</span><span class="p">,</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">user_id</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">"role"</span><span class="p">,</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">role</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nx">msg</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Вход выполнен."</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">msg</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"msg ok"</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="33">3.3. Страница просмотра заявок</h2>
+<h3 id="331-frontendapplicationshtml">3.3.1. Файл <code>frontend/applications.html</code></h3>
+<p>(полный код сохранён без сокращений)</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Мои заявки<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/styles.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Мои заявки<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">"table"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>ID<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Курс<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Дата<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Оплата<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Статус<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tbody</span> <span class="na">id</span><span class="o">=</span><span class="s">"appsTbody"</span><span class="p">&gt;&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Оставить отзыв<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"reviewForm"</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">"text"</span> <span class="na">required</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Отправить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"msg"</span> <span class="na">class</span><span class="o">=</span><span class="s">"msg"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="34">3.4. Страница формирования заявки</h2>
+<h3 id="341-frontendcreate_applicationhtml">3.4.1. Файл <code>frontend/create_application.html</code></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Новая заявка<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/styles.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Формирование заявки<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"appForm"</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Курс<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"course_name"</span> <span class="na">required</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Дата начала<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"date"</span> <span class="na">name</span><span class="o">=</span><span class="s">"start_date"</span> <span class="na">required</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">name</span><span class="o">=</span><span class="s">"payment_method"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Наличными"</span><span class="p">&gt;</span> Наличными<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">name</span><span class="o">=</span><span class="s">"payment_method"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Переводом по номеру телефона"</span><span class="p">&gt;</span> Переводом по номеру телефона<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Отправить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"msg"</span> <span class="na">class</span><span class="o">=</span><span class="s">"msg"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="35">3.5. Панель администратора</h2>
+<h3 id="351-frontendadminhtml">3.5.1. Файл <code>frontend/admin.html</code></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Админ<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/styles.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Панель администратора<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">"table"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>ID<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Пользователь<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Курс<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Статус<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tbody</span> <span class="na">id</span><span class="o">=</span><span class="s">"appsTbody"</span><span class="p">&gt;&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h1 id="4">4. Настройка стилей</h1>
+<p>Создать файл:</p>
+<div class="highlight"><pre><span></span><code>frontend/styles.css
+</code></pre></div>
+<p>(полный CSS сохранён без сокращений)</p>
+<p>👉 Подключить на каждой странице:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/styles.css"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>В <code>backend/app.py</code> добавить маршрут:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"/styles.css"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">styles</span><span class="p">():</span>
+    <span class="n">frontend_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">".."</span><span class="p">,</span> <span class="s2">"frontend"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">send_from_directory</span><span class="p">(</span><span class="n">frontend_dir</span><span class="p">,</span> <span class="s2">"styles.css"</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+<h1 id="5">5. Передача результатов</h1>
+<ol>
+<li>
+<p>Все файлы загрузить в индивидуальный репозиторий:</p>
+</li>
+<li>
+<p><code>frontend/</code></p>
+</li>
+<li><code>backend/</code></li>
+<li><code>db/</code></li>
+<li>ER-диаграмму</li>
+<li>
+<p>SQL-дамп</p>
+</li>
+<li>
+<p>Минимум два коммита:</p>
+</li>
+<li>
+<p>стартовый</p>
+</li>
+<li>финальный</li>
+</ol>
+<hr>
+<h1 id="6">6. Пример готового приложения</h1>
+<p>Для ознакомления:</p>
+<p>👉 <a href="../assets/files//gdrmi-demo.zip">Пример готового приложения</a></p>
+<h3 id="_6">Инструкция запуска:</h3>
+<ol>
+<li>Распаковать архив.</li>
+<li>Открыть в VS Code.</li>
+<li>В терминале выполнить:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>flask<span class="w"> </span>flask-cors<span class="w"> </span>pymysql
+</code></pre></div>
+<ol>
+<li>Запустить сервер:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>backend/app.py
+</code></pre></div>
+<ol>
+<li>
+<p>Импортировать БД:</p>
+</li>
+<li>
+<p><code>db/korochki.sql</code></p>
+</li>
+<li>
+<p>Перейти:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>http://127.0.0.1:5000/login
+</code></pre></div>
+<h3 id="_7">Тестовые данные</h3>
+<table>
+<thead>
+<tr>
+<th>Логин</th>
+<th>Пароль</th>
+<th>Роль</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Admin</td>
+<td>KorokNET</td>
+<td>Администратор</td>
+</tr>
+<tr>
+<td>test</td>
+<td>qazqaz123</td>
+<td>Пользователь</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_8">Доступные маршруты</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Путь</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/</code></td>
+<td>Авторизация</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/login</code></td>
+<td>Вход</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/register</code></td>
+<td>Регистрация</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/applications</code></td>
+<td>Просмотр заявок</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/create_application</code></td>
+<td>Создание заявки</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/admin</code></td>
+<td>Панель администратора</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-">4. Чек-лист для самопроверки</h2>
+<p>(Сохраняю смысл шаблона, но адаптирую под модуль 1: ER + full stack + репозиторий)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Баллы</th>
+<th style="text-align: left;">Критерии выполнения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">БД создана (таблицы, PK/FK, связи), есть ER-диаграмма, есть SQL-дамп, реализованы страницы регистрации/авторизации/заявок/создания заявки/админ-панели, всё работает в связке UI→API→DB, файлы в репозитории, есть стартовый и финальный коммит.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8-9</td>
+<td style="text-align: left;">Почти всё выполнено, есть мелкие недочёты (именования, частичные ошибки валидации, оформление, мелкие баги).</td>
+</tr>
+<tr>
+<td style="text-align: left;">5-7</td>
+<td style="text-align: left;">Функционал реализован частично: например есть БД и часть страниц/API, но нет админки или статусов/справочников, либо нарушены связи.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1–4</td>
+<td style="text-align: left;">Работа выполнена частично, есть серьёзные ошибки в БД, отсутствуют ключевые страницы, нет связки с сервером, нет дампа или диаграммы.</td>
+</tr>
+<tr>
+<td style="text-align: left;">0–3</td>
+<td style="text-align: left;">Работа не соответствует требованиям или выполнена с помощью ИИ, либо отсутствуют основные результаты (БД/ER/дамп/репозиторий/страницы).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5_1">5. Ссылка на документы и файлы</h2>
+<p>👉 <a href="../assets/files//Прил_ОЗ_КОД%2009.02.07-3-2026-М1.zip">Приложение к модулю 1</a></p>
+<p>👉 <a href="../assets/files//korochki.pdf">Скачать пример экспорта ER-диаграммы</a></p>
+<p>👉 <a href="../assets/files//korochki.sql">Скачать пример SQL-дампа</a></p>
+<p>👉 <a href="../assets/files//gdrmi-demo.zip">Пример готового приложения</a></p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.image.zoom", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="assets/js/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

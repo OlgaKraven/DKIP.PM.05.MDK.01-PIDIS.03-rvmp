@@ -1,0 +1,1639 @@
+<!DOCTYPE html><html lang="ru" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="server_side.html">
+      
+      
+        <link rel="next" href="../index.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/icons/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Базы данных - ПИДИС 3 курс 2 семестр</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../index.html" title="ПИДИС 3 курс 2 семестр" class="md-header__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="../assets/icons/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ПИДИС 3 курс 2 семестр
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Базы данных
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ПИДИС 3 курс 2 семестр" class="md-nav__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="../assets/icons/logo.png" alt="logo">
+
+    </a>
+    ПИДИС 3 курс 2 семестр
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Теория
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Теория
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="html_css.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML и CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="server_side.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Серверная часть
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Базы данных
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="databases.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Базы данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Роль базы данных в архитектуре информационной системы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Выбор реляционной модели данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Выбор реляционной модели данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Причины выбора реляционной модели
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Выбор СУБД MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Использование phpMyAdmin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Этапы проектирования базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Этапы проектирования базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-er-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Концептуальный уровень (ER-модель)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4.1. Концептуальный уровень (ER-модель)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные сущности системы:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные связи:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. Логический уровень (реляционная модель)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3. Физический уровень (реализация в MySQL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Первичные и внешние ключи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Первичные и внешние ключи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Первичные ключи
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Внешние ключи
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Нормализация базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Нормализация базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Назначение нормализации
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2. Первая нормальная форма (1НФ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3. Вторая нормальная форма (2НФ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.4. Третья нормальная форма (3НФ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Справочники как элемент корректной БД
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7. Справочники как элемент корректной БД">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры справочников:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-sql-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. SQL-скрипты и миграции
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. SQL-скрипты и миграции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1. Начальная схема БД
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2. Миграции схемы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Работа серверной части с БД
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Обеспечение целостности данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Итоговая оценка проектирования БД
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание лабораторных работ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы для подготовки к экзамену
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Требования для оформления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Роль базы данных в архитектуре информационной системы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Выбор реляционной модели данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Выбор реляционной модели данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Причины выбора реляционной модели
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Выбор СУБД MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Использование phpMyAdmin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Этапы проектирования базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Этапы проектирования базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-er-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Концептуальный уровень (ER-модель)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4.1. Концептуальный уровень (ER-модель)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные сущности системы:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные связи:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. Логический уровень (реляционная модель)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3. Физический уровень (реализация в MySQL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Первичные и внешние ключи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Первичные и внешние ключи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Первичные ключи
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Внешние ключи
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Нормализация базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Нормализация базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Назначение нормализации
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2. Первая нормальная форма (1НФ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3. Вторая нормальная форма (2НФ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.4. Третья нормальная форма (3НФ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Справочники как элемент корректной БД
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7. Справочники как элемент корректной БД">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры справочников:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-sql-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. SQL-скрипты и миграции
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. SQL-скрипты и миграции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1. Начальная схема БД
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2. Миграции схемы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Работа серверной части с БД
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Обеспечение целостности данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Итоговая оценка проектирования БД
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-"><strong>1. Теория - Проектирование и реализация базы данных информационной системы</strong></h1>
+<h2 id="11"><strong>1.1. Роль базы данных в архитектуре информационной системы</strong></h2>
+<p>База данных является <strong>ключевым компонентом информационной системы</strong>, обеспечивающим:</p>
+<ul>
+<li>централизованное хранение данных;</li>
+<li>целостность и непротиворечивость информации;</li>
+<li>поддержку бизнес-процессов;</li>
+<li>многопользовательский доступ;</li>
+<li>возможность масштабирования и сопровождения системы.</li>
+</ul>
+<p>В рассматриваемом проекте база данных служит <strong>единым источником достоверных данных</strong> для клиентской и серверной частей приложения.</p>
+<hr>
+<h2 id="12"><strong>1.2. Выбор реляционной модели данных</strong></h2>
+<h3 id="121"><strong>1.2.1. Причины выбора реляционной модели</strong></h3>
+<p>В проекте используется <strong>реляционная модель данных</strong>, так как:</p>
+<ul>
+<li>предметная область чётко описывается сущностями и связями;</li>
+<li>данные имеют строгую структуру;</li>
+<li>требуется поддержка ссылочной целостности;</li>
+<li>используются операции выборки, соединения и фильтрации.</li>
+</ul>
+<p>Реляционная модель обеспечивает логическую строгость и хорошо подходит для учебных и прикладных ИС.</p>
+<hr>
+<h3 id="122-mysql"><strong>1.2.2. Выбор СУБД MySQL</strong></h3>
+<p>В качестве СУБД выбрана <strong>MySQL</strong>, поскольку она:</p>
+<ul>
+<li>поддерживает стандарт SQL;</li>
+<li>широко используется в веб-разработке;</li>
+<li>интегрируется с Python (PyMySQL);</li>
+<li>входит в состав XAMPP;</li>
+<li>удобна для администрирования через phpMyAdmin.</li>
+</ul>
+<hr>
+<h2 id="13-phpmyadmin"><strong>1.3. Использование phpMyAdmin</strong></h2>
+<p><strong>phpMyAdmin</strong> применяется как инструмент администрирования и анализа базы данных.</p>
+<p>С его помощью выполняются:</p>
+<ul>
+<li>создание и изменение таблиц;</li>
+<li>выполнение SQL-скриптов;</li>
+<li>просмотр структуры таблиц;</li>
+<li>анализ связей;</li>
+<li>проверка данных после выполнения операций;</li>
+<li>визуальный контроль нормализации.</li>
+</ul>
+<p>phpMyAdmin используется <strong>на этапе разработки и сопровождения</strong>, но не участвует в работе конечного приложения.</p>
+<hr>
+<h2 id="14"><strong>1.4. Этапы проектирования базы данных</strong></h2>
+<p>Проектирование базы данных выполняется в <strong>три этапа</strong>, соответствующих классической методологии.</p>
+<hr>
+<h3 id="141-er-"><strong>1.4.1. Концептуальный уровень (ER-модель)</strong></h3>
+<p>На концептуальном уровне определяется <strong>предметная область</strong>, выделяются основные сущности и связи между ними <strong>без привязки к СУБД</strong>.</p>
+<h4 id="_1"><strong>Основные сущности системы:</strong></h4>
+<ol>
+<li>Пользователь</li>
+<li>Роль</li>
+<li>Заявка</li>
+<li>Статус заявки</li>
+<li>Способ оплаты</li>
+<li>Курс</li>
+<li>Отзыв</li>
+</ol>
+<h4 id="_2"><strong>Основные связи:</strong></h4>
+<ul>
+<li>один пользователь имеет одну роль;</li>
+<li>пользователь может создать несколько заявок;</li>
+<li>каждая заявка относится к одному курсу;</li>
+<li>каждая заявка имеет один статус;</li>
+<li>каждая заявка использует один способ оплаты;</li>
+<li>пользователь может оставить несколько отзывов.</li>
+</ul>
+<p>ER-диаграмма на этом уровне отражает <strong>логику предметной области</strong>, а не реализацию.</p>
+<hr>
+<h3 id="142"><strong>1.4.2. Логический уровень (реляционная модель)</strong></h3>
+<p>На логическом уровне сущности преобразуются в таблицы, а связи — во внешние ключи.</p>
+<p>Каждая сущность представляется отдельной таблицей:</p>
+<ul>
+<li><code>users</code></li>
+<li><code>roles</code></li>
+<li><code>applications</code></li>
+<li><code>application_statuses</code></li>
+<li><code>payment_methods</code></li>
+<li><code>courses</code></li>
+<li><code>reviews</code></li>
+</ul>
+<p>Связи реализуются через <strong>внешние ключи</strong>, что обеспечивает целостность данных.</p>
+<hr>
+<h3 id="143-mysql"><strong>1.4.3. Физический уровень (реализация в MySQL)</strong></h3>
+<p>На физическом уровне определяются:</p>
+<ul>
+<li>типы данных (<code>INT</code>, <code>VARCHAR</code>, <code>DATE</code>, <code>TEXT</code>);</li>
+<li>первичные ключи;</li>
+<li>внешние ключи;</li>
+<li>ограничения (<code>NOT NULL</code>, <code>UNIQUE</code>);</li>
+<li>индексы.</li>
+</ul>
+<p>Этот уровень полностью зависит от выбранной СУБД (MySQL).</p>
+<hr>
+<h2 id="15"><strong>1.5. Первичные и внешние ключи</strong></h2>
+<h3 id="151"><strong>1.5.1. Первичные ключи</strong></h3>
+<p>Во всех таблицах используется суррогатный первичный ключ:</p>
+<div class="highlight"><pre><span></span><code><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span>
+</code></pre></div>
+<p>Преимущества:</p>
+<ul>
+<li>гарантированная уникальность;</li>
+<li>простота ссылок;</li>
+<li>независимость от бизнес-данных;</li>
+<li>высокая производительность JOIN-операций.</li>
+</ul>
+<hr>
+<h3 id="152"><strong>1.5.2. Внешние ключи</strong></h3>
+<p>Примеры связей:</p>
+<ul>
+<li><code>users.role_id → roles.id</code></li>
+<li><code>applications.user_id → users.id</code></li>
+<li><code>applications.status_id → application_statuses.id</code></li>
+<li><code>applications.payment_method_id → payment_methods.id</code></li>
+<li><code>reviews.user_id → users.id</code></li>
+<li><code>applications.course_id → courses.id</code></li>
+</ul>
+<p>Внешние ключи предотвращают:</p>
+<ul>
+<li>появление «осиротевших» записей;</li>
+<li>логические ошибки в данных;</li>
+<li>нарушение связей между сущностями.</li>
+</ul>
+<hr>
+<h2 id="16"><strong>1.6. Нормализация базы данных</strong></h2>
+<h3 id="161"><strong>1.6.1. Назначение нормализации</strong></h3>
+<p>Нормализация направлена на:</p>
+<ul>
+<li>устранение дублирования данных;</li>
+<li>предотвращение аномалий обновления;</li>
+<li>повышение логической чистоты структуры;</li>
+<li>упрощение сопровождения БД.</li>
+</ul>
+<hr>
+<h3 id="162-1"><strong>1.6.2. Первая нормальная форма (1НФ)</strong></h3>
+<p>Требования 1НФ:</p>
+<ul>
+<li>все поля атомарны;</li>
+<li>нет повторяющихся групп;</li>
+<li>каждая запись уникальна.</li>
+</ul>
+<p><strong>В проекте:</strong></p>
+<ul>
+<li>каждое поле содержит одно значение;</li>
+<li>отсутствуют списки или массивы;</li>
+<li>все таблицы имеют первичный ключ.</li>
+</ul>
+<hr>
+<h3 id="163-2"><strong>1.6.3. Вторая нормальная форма (2НФ)</strong></h3>
+<p>Требования 2НФ:</p>
+<ul>
+<li>соблюдение 1НФ;</li>
+<li>отсутствие частичных зависимостей от ключа.</li>
+</ul>
+<p><strong>В проекте:</strong></p>
+<ul>
+<li>используются одиночные первичные ключи;</li>
+<li>все неключевые атрибуты зависят от полного ключа.</li>
+</ul>
+<hr>
+<h3 id="164-3"><strong>1.6.4. Третья нормальная форма (3НФ)</strong></h3>
+<p>Требования 3НФ:</p>
+<ul>
+<li>соблюдение 2НФ;</li>
+<li>отсутствие транзитивных зависимостей.</li>
+</ul>
+<p><strong>Реализация в проекте:</strong></p>
+<ul>
+<li>роли вынесены в отдельную таблицу;</li>
+<li>статусы заявок вынесены в справочник;</li>
+<li>способы оплаты вынесены в справочник;</li>
+<li>курсы вынесены в отдельный справочник;</li>
+<li>таблицы заявок содержат только ссылки на справочники.</li>
+</ul>
+<p>Это исключает дублирование строковых значений и упрощает изменение данных.</p>
+<hr>
+<h2 id="17"><strong>1.7. Справочники как элемент корректной БД</strong></h2>
+<p>Справочники используются для:</p>
+<ul>
+<li>фиксированных наборов значений;</li>
+<li>обеспечения единообразия данных;</li>
+<li>реализации бизнес-правил;</li>
+<li>поддержки 3НФ.</li>
+</ul>
+<h3 id="_3"><strong>Примеры справочников:</strong></h3>
+<ul>
+<li><code>roles</code></li>
+<li><code>application_statuses</code></li>
+<li><code>payment_methods</code></li>
+<li><code>courses</code></li>
+</ul>
+<p>Изменение справочника <strong>не требует изменения основной таблицы заявок</strong>.</p>
+<hr>
+<h2 id="18-sql-"><strong>1.8. SQL-скрипты и миграции</strong></h2>
+<h3 id="181"><strong>1.8.1. Начальная схема БД</strong></h3>
+<p>Основной SQL-файл содержит:</p>
+<ul>
+<li>создание таблиц;</li>
+<li>определение ключей;</li>
+<li>первичную структуру БД.</li>
+</ul>
+<p>Используется для развёртывания системы.</p>
+<hr>
+<h3 id="182"><strong>1.8.2. Миграции схемы</strong></h3>
+<p>Отдельные SQL-файлы используются для:</p>
+<ul>
+<li>исправления ошибок проектирования;</li>
+<li>усиления ограничений (<code>NOT NULL</code>, <code>UNIQUE</code>);</li>
+<li>доработки структуры без пересоздания БД.</li>
+</ul>
+<p>Это демонстрирует <strong>эволюцию схемы базы данных</strong>, что является важным практическим аспектом.</p>
+<hr>
+<h2 id="19"><strong>1.9. Работа серверной части с БД</strong></h2>
+<p>Серверное приложение:</p>
+<ul>
+<li>использует параметризованные SQL-запросы;</li>
+<li>выполняет сложные JOIN-запросы;</li>
+<li>обеспечивает согласованность данных;</li>
+<li>проверяет корректность входных данных;</li>
+<li>реализует CRUD-операции.</li>
+</ul>
+<p>База данных и сервер образуют <strong>единый слой данных</strong>.</p>
+<hr>
+<h2 id="110"><strong>1.10. Обеспечение целостности данных</strong></h2>
+<p>Целостность данных обеспечивается:</p>
+<ul>
+<li>первичными ключами;</li>
+<li>внешними ключами;</li>
+<li>ограничениями <code>NOT NULL</code>;</li>
+<li>уникальными индексами;</li>
+<li>серверной валидацией данных.</li>
+</ul>
+<p>Это предотвращает логические ошибки и повреждение данных.</p>
+<hr>
+<h2 id="111"><strong>1.11. Итоговая оценка проектирования БД</strong></h2>
+<p>База данных проекта:</p>
+<ul>
+<li>построена по реляционной модели;</li>
+<li>приведена к третьей нормальной форме;</li>
+<li>использует справочники;</li>
+<li>поддерживает масштабируемость;</li>
+<li>соответствует требованиям учебной ИС.</li>
+</ul>
+<p>Проектирование БД выполнено <strong>корректно с методической точки зрения</strong> и отражает реальные подходы, применяемые в профессиональной разработке.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.image.zoom", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/js/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

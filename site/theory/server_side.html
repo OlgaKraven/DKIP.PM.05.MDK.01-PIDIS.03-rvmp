@@ -1,0 +1,1383 @@
+<!DOCTYPE html><html lang="ru" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="javascript.html">
+      
+      
+        <link rel="next" href="databases.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/icons/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Серверная часть - ПИДИС 3 курс 2 семестр</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-flask-apppy" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../index.html" title="ПИДИС 3 курс 2 семестр" class="md-header__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="../assets/icons/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ПИДИС 3 курс 2 семестр
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Серверная часть
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ПИДИС 3 курс 2 семестр" class="md-nav__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="../assets/icons/logo.png" alt="logo">
+
+    </a>
+    ПИДИС 3 курс 2 семестр
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Теория
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Теория
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="html_css.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML и CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Серверная часть
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="server_side.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Серверная часть
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Состав модулей и назначение импортов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Инициализация приложения и CORS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Конфигурация БД и принципы подключения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Работа с путями проекта и раздача фронтенда
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Маршруты отдачи HTML и статических файлов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Маршруты отдачи HTML и статических файлов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. HTML-страницы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-cssjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. CSS/JS/медиа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Регулярные выражения и контракт данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Хеширование пароля и хранение учётных данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Регистрация пользователя: структура обработчика
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Авторизация: проверка пароля и выдача роли
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Работа со справочниками и связями в БД
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Получение заявок пользователя и форматирование дат
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Отзывы: минимальная серверная бизнес-логика
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Создание заявки: преобразование бизнес-правил в проверки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Админские операции: список и обновление статуса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14. Админские операции: список и обновление статуса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1. Список всех заявок
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2. Обновление статуса
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15. Отладочные остатки и режим запуска
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16. Важное ограничение текущей модели безопасности
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="databases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Базы данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание лабораторных работ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы для подготовки к экзамену
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Требования для оформления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Состав модулей и назначение импортов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Инициализация приложения и CORS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Конфигурация БД и принципы подключения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Работа с путями проекта и раздача фронтенда
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Маршруты отдачи HTML и статических файлов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Маршруты отдачи HTML и статических файлов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. HTML-страницы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-cssjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. CSS/JS/медиа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Регулярные выражения и контракт данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Хеширование пароля и хранение учётных данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Регистрация пользователя: структура обработчика
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Авторизация: проверка пароля и выдача роли
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Работа со справочниками и связями в БД
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Получение заявок пользователя и форматирование дат
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Отзывы: минимальная серверная бизнес-логика
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Создание заявки: преобразование бизнес-правил в проверки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Админские операции: список и обновление статуса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14. Админские операции: список и обновление статуса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1. Список всех заявок
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2. Обновление статуса
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15. Отладочные остатки и режим запуска
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16. Важное ограничение текущей модели безопасности
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-flask-apppy">1. Теория - Серверная реализация на Flask: полный разбор по <code>app.py</code></h1>
+<h2 id="11">1.1. Состав модулей и назначение импортов</h2>
+<p>В файле используются несколько категорий библиотек:</p>
+<ul>
+<li><strong>Flask-слой</strong>: <code>Flask</code>, <code>request</code>, <code>jsonify</code>, <code>send_from_directory</code> — создание приложения, чтение запросов, ответы JSON, отдача файлов фронтенда. </li>
+<li><strong>Инфраструктура</strong>: <code>os</code> — работа с путями и каталогами проекта. </li>
+<li><strong>CORS</strong>: <code>flask_cors.CORS</code> — разрешение браузерных запросов к API при разделении источников. </li>
+<li><strong>Валидация</strong>: <code>re</code> и регулярные выражения для проверки полей. </li>
+<li><strong>База данных</strong>: <code>pymysql</code> — подключение и запросы к MySQL. </li>
+<li><strong>Безопасность паролей</strong>: <code>hashlib</code> — вычисление SHA-256 для хранения пароля в виде хеша. </li>
+</ul>
+<p>Важно: в конце файла <code>hashlib</code> импортируется <strong>повторно</strong> и выполняется <code>print(...)</code> — это уже относится к отладочным остаткам (см. п. 1.11). </p>
+<hr>
+<h2 id="12-cors">1.2. Инициализация приложения и CORS</h2>
+<p>Создание приложения и включение CORS:</p>
+<ul>
+<li><code>app = Flask(__name__)</code></li>
+<li><code>CORS(app)</code></li>
+</ul>
+<p>Теоретически это означает, что сервер:</p>
+<ul>
+<li>поднимает HTTP-приложение Flask;</li>
+<li>разрешает междоменные запросы (например, если фронтенд открыт не тем же доменом/портом). </li>
+</ul>
+<hr>
+<h2 id="13">1.3. Конфигурация БД и принципы подключения</h2>
+<p>В <code>DB_CONFIG</code> заданы параметры MySQL (типично для XAMPP): хост, пользователь, база, кодировка, а также <code>cursorclass = DictCursor</code>. </p>
+<p>Теоретически это даёт:</p>
+<ul>
+<li><strong>управляемое подключение</strong> через <code>pymysql.connect(**DB_CONFIG)</code>;</li>
+<li>возвращение строк результата как словарей (<code>{"id": ..., "name": ...}</code>), что удобно для <code>jsonify</code>;</li>
+<li>кодировка <code>utf8mb4</code> корректно хранит кириллицу и расширенные символы.</li>
+</ul>
+<p>Функция <code>db_conn()</code> — инкапсуляция подключения, повышает сопровождаемость. </p>
+<hr>
+<h2 id="14">1.4. Работа с путями проекта и раздача фронтенда</h2>
+<p>Файл задаёт базовые директории:</p>
+<ul>
+<li><code>BASE_DIR = os.path.dirname(__file__)</code></li>
+<li><code>FRONTEND_DIR = os.path.join(BASE_DIR, "..", "frontend")</code> </li>
+</ul>
+<p>Это означает, что Flask выступает <strong>не только как API</strong>, но и как сервер статического фронтенда (HTML/CSS/JS/изображения).</p>
+<hr>
+<h2 id="15-html">1.5. Маршруты отдачи HTML и статических файлов</h2>
+<h3 id="151-html-">1.5.1. HTML-страницы</h3>
+<p>Эндпоинты:</p>
+<ul>
+<li><code>/</code> → <code>login.html</code></li>
+<li><code>/login</code> → <code>login.html</code></li>
+<li><code>/register</code> → <code>register.html</code></li>
+<li><code>/applications</code> → <code>applications.html</code></li>
+<li><code>/create_application</code> → <code>create_application.html</code></li>
+<li><code>/admin</code> → <code>admin.html</code> </li>
+</ul>
+<p>Теоретически это “серверная навигация”: при открытии URL сервер возвращает соответствующий HTML.</p>
+<h3 id="152-cssjs">1.5.2. CSS/JS/медиа</h3>
+<p>Эндпоинты:</p>
+<ul>
+<li><code>/styles.css</code> → <code>styles.css</code></li>
+<li><code>/slider.js</code> → <code>slider.js</code></li>
+<li><code>/assets/&lt;path:filepath&gt;</code> → статические ресурсы из папки <code>assets/</code> </li>
+</ul>
+<p>Важно: <strong><code>/styles.css</code> определён дважды</strong> (две разные функции <code>styles_css()</code> и <code>styles()</code>). В Flask повтор маршрута приводит к тому, что фактически будет работать <strong>последняя объявленная</strong> функция (или возможны предупреждения/конфликт в зависимости от версии). Это нужно учитывать как теоретический пример “коллизии маршрутов”. </p>
+<hr>
+<h2 id="16">1.6. Регулярные выражения и контракт данных</h2>
+<p>В коде определены регулярные выражения:</p>
+<ul>
+<li><code>RE_LOGIN = r"^[A-Za-z]{4,}$"</code> — только латинские буквы, минимум 4;</li>
+<li><code>RE_FULL_NAME</code> — кириллица и пробелы;</li>
+<li><code>RE_PHONE</code> — формат <code>8(XXX)XXX-XX-XX</code>;</li>
+<li><code>RE_EMAIL</code> — упрощённая проверка email. </li>
+</ul>
+<p>Теоретически это реализация принципа:</p>
+<blockquote>
+<p>сервер обязан валидировать входные данные независимо от клиента.</p>
+</blockquote>
+<p>При этом есть нюанс согласованности: в HTML у вас логин допускает <strong>латиницу и цифры</strong> (<code>^[A-Za-z0-9]{4,}$</code>), а сервер допускает только буквы (<code>^[A-Za-z]{4,}$</code>). Это пример расхождения “клиентского и серверного контракта”, из-за которого пользователь может пройти проверку формы, но получить отказ на сервере. </p>
+<hr>
+<h2 id="17">1.7. Хеширование пароля и хранение учётных данных</h2>
+<p>Функция <code>hash_password()</code> возвращает SHA-256 от строки пароля. </p>
+<p>Теоретически:</p>
+<ul>
+<li><strong>пароль не хранится в исходном виде</strong>;</li>
+<li>на входе и при проверке вычисляется хеш и сравнивается с БД.</li>
+</ul>
+<p>Для production-практики обычно применяют <code>bcrypt/argon2</code> + соль, но для учебной работы демонстрация “хранить только хеш” является базовым минимумом.</p>
+<hr>
+<h2 id="18">1.8. Регистрация пользователя: структура обработчика</h2>
+<p><code>POST /api/register</code> реализует полный сценарий:</p>
+<ol>
+<li>чтение JSON (<code>request.get_json</code>)</li>
+<li>нормализация данных (<code>strip</code>)</li>
+<li>обязательность всех полей</li>
+<li>проверки по regex и длине пароля</li>
+<li>проверка уникальности логина/email</li>
+<li>получение <code>role_id</code> для роли <code>user</code></li>
+<li>вставка в таблицу <code>users</code></li>
+<li>возврат 201 или кодов ошибок 400/409/500 </li>
+</ol>
+<p>Теоретически это соответствует best practice:</p>
+<ul>
+<li>сначала валидация,</li>
+<li>затем запросы к БД,</li>
+<li>использование параметризованных запросов (<code>%s</code>) как защита от SQL-инъекций.</li>
+</ul>
+<hr>
+<h2 id="19">1.9. Авторизация: проверка пароля и выдача роли</h2>
+<p><code>POST /api/login</code>:</p>
+<ul>
+<li>проверяет наличие логина/пароля;</li>
+<li>валидирует формат логина;</li>
+<li>получает пользователя и роль через <code>JOIN roles</code>;</li>
+<li>сравнивает хеши;</li>
+<li>возвращает <code>user_id</code> и <code>role</code>. </li>
+</ul>
+<p>Теоретически важно, что роль возвращается клиенту — это основа для UI-разграничения (“админка”/“пользователь”), но <strong>сама по себе</strong> эта роль на клиенте не является полноценной защитой (см. п. 1.12).</p>
+<hr>
+<h2 id="110">1.10. Работа со справочниками и связями в БД</h2>
+<p>В логике заявок и списков видно, что база данных нормализована и использует справочники:</p>
+<ul>
+<li><code>payment_methods</code> (способ оплаты),</li>
+<li><code>application_statuses</code> (статусы),</li>
+<li><code>roles</code> (роли). </li>
+</ul>
+<p>Это теоретически важно как пример:</p>
+<ul>
+<li>хранить “значения перечислений” не строками в основной таблице, а через ссылки на справочники (ID);</li>
+<li>обеспечивать целостность и единообразие данных.</li>
+</ul>
+<hr>
+<h2 id="111">1.11. Получение заявок пользователя и форматирование дат</h2>
+<p><code>GET /api/applications/my</code> принимает <code>user_id</code> через query string. </p>
+<p>Здесь важно:</p>
+<ul>
+<li>сервер проверяет, что <code>user_id</code> — число (<code>isdigit</code>);</li>
+<li>
+<p>в SQL используется <code>DATE_FORMAT(...)</code> для выдачи дат сразу в строковом формате:</p>
+</li>
+<li>
+<p><code>start_date</code> в <code>YYYY-MM-DD</code>,</p>
+</li>
+<li><code>created_at</code> в <code>YYYY-MM-DD HH:MM:SS</code>. </li>
+</ul>
+<p>Теоретически это демонстрирует подход:</p>
+<ul>
+<li>либо форматировать даты на сервере (как здесь),</li>
+<li>либо отдавать “сырые” даты и форматировать на клиенте.</li>
+</ul>
+<hr>
+<h2 id="112-">1.12. Отзывы: минимальная серверная бизнес-логика</h2>
+<p><code>POST /api/reviews</code>:</p>
+<ul>
+<li>проверяет <code>user_id</code> как <code>int</code>;</li>
+<li>требует непустой текст;</li>
+<li>проверяет существование пользователя перед вставкой;</li>
+<li>пишет в <code>reviews (user_id, text)</code> и возвращает 201. </li>
+</ul>
+<p>Теоретический смысл: защита от “висячих ссылок” (когда отзыв создаётся для несуществующего пользователя).</p>
+<hr>
+<h2 id="113-">1.13. Создание заявки: преобразование бизнес-правил в проверки</h2>
+<p><code>POST /api/applications</code>:</p>
+<ul>
+<li>проверяет <code>user_id</code>;</li>
+<li>требует <code>course_name</code>, <code>start_date</code>, <code>payment_method</code>;</li>
+<li>допускает <strong>только два</strong> способа оплаты (строгое перечисление);</li>
+<li>маппит <code>payment_method</code> → <code>payment_method_id</code>;</li>
+<li>устанавливает статус по умолчанию “Новая” через справочник;</li>
+<li>создаёт запись в <code>applications</code>. </li>
+</ul>
+<p>Теоретически это пример “сервер обеспечивает правила предметной области”, а не доверяет клиенту.</p>
+<hr>
+<h2 id="114">1.14. Админские операции: список и обновление статуса</h2>
+<h3 id="1141">1.14.1. Список всех заявок</h3>
+<p><code>GET /api/admin/applications</code> возвращает таблицу заявок с привязкой логина пользователя, способа оплаты и статуса через JOIN. </p>
+<h3 id="1142">1.14.2. Обновление статуса</h3>
+<p><code>PATCH /api/admin/applications/&lt;app_id&gt;/status</code>:</p>
+<ul>
+<li>принимает <code>status</code> из JSON,</li>
+<li>разрешает только <code>{"Идёт обучение", "Обучение завершено", "Новая"}</code>,</li>
+<li>получает <code>status_id</code> из справочника,</li>
+<li>обновляет строку <code>applications</code>,</li>
+<li>возвращает 200/400/404/500. </li>
+</ul>
+<p>Теоретически это корректный паттерн частичного обновления ресурса через PATCH.</p>
+<hr>
+<h2 id="115">1.15. Отладочные остатки и режим запуска</h2>
+<p>Внизу файла присутствует:</p>
+<ul>
+<li>повторный <code>import hashlib</code>;</li>
+<li><code>print(hashlib.sha256("KorokNET"...))</code> — вывод хеша в консоль при старте;</li>
+<li>запуск <code>app.run(..., debug=True)</code>. </li>
+</ul>
+<p>Теоретически:</p>
+<ul>
+<li><code>debug=True</code> удобен в разработке, но в production недопустим;</li>
+<li>печать хеша — признак тестирования/проверки (её обычно удаляют из финальной версии).</li>
+</ul>
+<hr>
+<h2 id="116">1.16. Важное ограничение текущей модели безопасности</h2>
+<p>В файле отсутствует серверная проверка “админ ли пользователь” для маршрутов <code>/api/admin/...</code>. Сейчас доступ к админ-эндпоинтам регулируется в основном клиентом (через <code>localStorage role</code>). </p>
+<p>Теоретически это важно сформулировать так:</p>
+<ul>
+<li><strong>клиентский контроль не является защитой</strong>, потому что запрос можно отправить напрямую;</li>
+<li>корректная модель требует серверной авторизации (сессия/токен) и проверки роли на сервере.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.image.zoom", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/js/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
