@@ -1,0 +1,1727 @@
+<!DOCTYPE html><html lang="ru" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="html_css.html">
+      
+      
+        <link rel="next" href="server_side.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/icons/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>JavaScript - ПИДИС 3 курс 2 семестр</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-javascript-" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../index.html" title="ПИДИС 3 курс 2 семестр" class="md-header__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="../assets/icons/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ПИДИС 3 курс 2 семестр
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JavaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="ПИДИС 3 курс 2 семестр" class="md-nav__button md-logo" aria-label="ПИДИС 3 курс 2 семестр" data-md-component="logo">
+      
+  <img src="../assets/icons/logo.png" alt="logo">
+
+    </a>
+    ПИДИС 3 курс 2 семестр
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Теория
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Теория
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="html_css.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML и CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="javascript.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Роль JavaScript в архитектуре клиент–сервер
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-dom-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. DOM как объектная модель HTML-документа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. DOM как объектная модель HTML-документа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Понятие DOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Поиск элементов DOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Событийная модель JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Событийная модель JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. Принцип событий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. Обработчики событий
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Работа с формами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Работа с формами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Отмена стандартного поведения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-html5-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. HTML5-валидация через JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Работа со строками и нормализация данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Асинхронность и Fetch API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Асинхронность и Fetch API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Асинхронная модель
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2. Fetch API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Обработка ошибок и устойчивость интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-localstorage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Управление состоянием через localStorage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Управление состоянием через localStorage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-localstorage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1. Назначение localStorage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2. Использование состояния
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Динамическое формирование HTML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9. Динамическое формирование HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1. Таблицы и списки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2. Управление классами
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Реализация бизнес-правил на клиенте
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Фильтрация и пагинация данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Таймеры и интервалы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-iife" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Изоляция кода и IIFE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Поддержка мобильных устройств
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15. Доступность (Accessibility)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16. Ограничения текущей реализации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17. Итоговая роль JavaScript в проекте
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="server_side.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Серверная часть
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="databases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Базы данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание лабораторных работ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа №4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы для подготовки к экзамену
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Требования для оформления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Роль JavaScript в архитектуре клиент–сервер
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-dom-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. DOM как объектная модель HTML-документа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. DOM как объектная модель HTML-документа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Понятие DOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Поиск элементов DOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Событийная модель JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Событийная модель JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. Принцип событий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. Обработчики событий
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Работа с формами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Работа с формами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Отмена стандартного поведения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-html5-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. HTML5-валидация через JavaScript
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Работа со строками и нормализация данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Асинхронность и Fetch API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Асинхронность и Fetch API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Асинхронная модель
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2. Fetch API
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Обработка ошибок и устойчивость интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-localstorage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Управление состоянием через localStorage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Управление состоянием через localStorage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-localstorage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1. Назначение localStorage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2. Использование состояния
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Динамическое формирование HTML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9. Динамическое формирование HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1. Таблицы и списки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2. Управление классами
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Реализация бизнес-правил на клиенте
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Фильтрация и пагинация данных
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Таймеры и интервалы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-iife" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Изоляция кода и IIFE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Поддержка мобильных устройств
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15. Доступность (Accessibility)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16. Ограничения текущей реализации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17. Итоговая роль JavaScript в проекте
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-javascript-"><strong>1. Теория - JavaScript в клиентской части веб-приложения: полный теоретический разбор</strong></h1>
+<h2 id="11-javascript"><strong>1.1. Роль JavaScript в архитектуре клиент–сервер</strong></h2>
+<p>В данной информационной системе JavaScript выполняет функции:</p>
+<ul>
+<li>реализации <strong>клиентской логики</strong>;</li>
+<li>управления поведением HTML-элементов;</li>
+<li>асинхронного взаимодействия с сервером (REST API);</li>
+<li>управления состоянием интерфейса;</li>
+<li>реализации бизнес-правил на стороне клиента;</li>
+<li>повышения отзывчивости и UX без перезагрузки страницы.</li>
+</ul>
+<p>JavaScript связывает:</p>
+<blockquote>
+<p><strong>HTML (структура) + CSS (оформление) + Backend API (данные)</strong>
+в единое интерактивное приложение.</p>
+</blockquote>
+<hr>
+<h2 id="12-dom-html-"><strong>1.2. DOM как объектная модель HTML-документа</strong></h2>
+<h3 id="121-dom"><strong>1.2.1. Понятие DOM</strong></h3>
+<p><strong>DOM (Document Object Model)</strong> — это объектное представление HTML-документа в памяти браузера.</p>
+<p>Каждый HTML-элемент становится JavaScript-объектом, с которым можно:</p>
+<ul>
+<li>читать и изменять содержимое;</li>
+<li>управлять стилями и классами;</li>
+<li>подписываться на события;</li>
+<li>добавлять и удалять элементы.</li>
+</ul>
+<hr>
+<h3 id="122-dom"><strong>1.2.2. Поиск элементов DOM</strong></h3>
+<p>В проекте применяются основные методы DOM API:</p>
+<ul>
+<li><code>document.getElementById()</code> — доступ по <code>id</code>;</li>
+<li><code>document.querySelector()</code> — первый элемент по CSS-селектору;</li>
+<li><code>document.querySelectorAll()</code> — коллекция элементов;</li>
+<li><code>document.createElement()</code> — динамическое создание узлов.</li>
+</ul>
+<p>Теоретически это означает:</p>
+<blockquote>
+<p>JavaScript <strong>не дублирует HTML</strong>, а управляет уже существующей структурой.</p>
+</blockquote>
+<hr>
+<h2 id="13-javascript"><strong>1.3. Событийная модель JavaScript</strong></h2>
+<h3 id="131"><strong>1.3.1. Принцип событий</strong></h3>
+<p>JavaScript в браузере работает <strong>реактивно</strong>: код выполняется в ответ на события:</p>
+<ul>
+<li>действия пользователя;</li>
+<li>события браузера;</li>
+<li>таймеры;</li>
+<li>сетевые ответы.</li>
+</ul>
+<hr>
+<h3 id="132"><strong>1.3.2. Обработчики событий</strong></h3>
+<p>Во всех файлах используется современный подход:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"event"</span><span class="p">,</span><span class="w"> </span><span class="nx">handler</span><span class="p">)</span>
+</code></pre></div>
+<p>Используемые события:</p>
+<ul>
+<li><code>submit</code> — отправка формы;</li>
+<li><code>click</code> — кнопки, пагинация, сохранение;</li>
+<li><code>mouseenter</code> / <code>mouseleave</code> — управление слайдером;</li>
+<li><code>touchstart</code> / <code>touchend</code> — мобильные устройства.</li>
+</ul>
+<p>Теоретически:</p>
+<ul>
+<li>логика отделена от HTML;</li>
+<li>обработчики можно добавлять и удалять динамически;</li>
+<li>код легче поддерживать.</li>
+</ul>
+<hr>
+<h2 id="14"><strong>1.4. Работа с формами</strong></h2>
+<h3 id="141"><strong>1.4.1. Отмена стандартного поведения</strong></h3>
+<p>Во всех формах применяется:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</code></pre></div>
+<p>Это предотвращает:</p>
+<ul>
+<li>перезагрузку страницы;</li>
+<li>потерю состояния интерфейса;</li>
+<li>неконтролируемую отправку данных.</li>
+</ul>
+<hr>
+<h3 id="142-html5-javascript"><strong>1.4.2. HTML5-валидация через JavaScript</strong></h3>
+<p>Используется метод:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">form</span><span class="p">.</span><span class="nx">checkValidity</span><span class="p">()</span>
+</code></pre></div>
+<p>Он учитывает:</p>
+<ul>
+<li><code>required</code>;</li>
+<li><code>minlength</code>;</li>
+<li><code>pattern</code>;</li>
+<li>тип поля (<code>email</code>, <code>password</code>).</li>
+</ul>
+<p>Теоретически:</p>
+<blockquote>
+<p>JavaScript <strong>использует возможности HTML</strong>, а не дублирует их вручную.</p>
+</blockquote>
+<hr>
+<h2 id="15"><strong>1.5. Работа со строками и нормализация данных</strong></h2>
+<p>Во всех обработчиках применяется:</p>
+<ul>
+<li><code>trim()</code> — удаление пробелов;</li>
+<li>приведение типов (<code>Number()</code>, <code>String()</code>);</li>
+<li>проверки на пустые значения.</li>
+</ul>
+<p>Это важно для:</p>
+<ul>
+<li>корректной передачи данных;</li>
+<li>предотвращения ошибок БД;</li>
+<li>единообразия контрактов API.</li>
+</ul>
+<hr>
+<h2 id="16-fetch-api"><strong>1.6. Асинхронность и Fetch API</strong></h2>
+<h3 id="161"><strong>1.6.1. Асинхронная модель</strong></h3>
+<p>В проекте используется современный синтаксис:</p>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="err">/ await</span>
+</code></pre></div>
+<p>Преимущества:</p>
+<ul>
+<li>линейное чтение кода;</li>
+<li>отсутствие «callback-адов»;</li>
+<li>удобная обработка ошибок.</li>
+</ul>
+<hr>
+<h3 id="162-fetch-api"><strong>1.6.2. Fetch API</strong></h3>
+<p><code>fetch()</code> используется для всех запросов к серверу:</p>
+<ul>
+<li><code>POST</code> — регистрация, вход, заявки, отзывы;</li>
+<li><code>GET</code> — получение списков;</li>
+<li><code>PATCH</code> — изменение статуса заявки.</li>
+</ul>
+<p>Общий паттерн:</p>
+<ol>
+<li>отправка JSON;</li>
+<li>ожидание ответа;</li>
+<li>проверка <code>res.ok</code>;</li>
+<li>чтение <code>res.json()</code>.</li>
+</ol>
+<hr>
+<h2 id="17"><strong>1.7. Обработка ошибок и устойчивость интерфейса</strong></h2>
+<p>Во всех запросах применяется:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Ошибки обрабатываются на двух уровнях:</p>
+<ul>
+<li><strong>HTTP-уровень</strong> (<code>res.ok</code>);</li>
+<li><strong>сетевой уровень</strong> (отсутствие сервера).</li>
+</ul>
+<p>Пользователь всегда получает сообщение:</p>
+<ul>
+<li>об ошибке;</li>
+<li>или об успешном действии.</li>
+</ul>
+<hr>
+<h2 id="18-localstorage"><strong>1.8. Управление состоянием через localStorage</strong></h2>
+<h3 id="181-localstorage"><strong>1.8.1. Назначение localStorage</strong></h3>
+<p><code>localStorage</code> используется как <strong>клиентское хранилище состояния</strong>:</p>
+<ul>
+<li><code>user_id</code>;</li>
+<li><code>role</code>.</li>
+</ul>
+<p>Данные:</p>
+<ul>
+<li>сохраняются между перезагрузками страниц;</li>
+<li>доступны JavaScript-коду;</li>
+<li>не отправляются автоматически на сервер.</li>
+</ul>
+<hr>
+<h3 id="182"><strong>1.8.2. Использование состояния</strong></h3>
+<p>На основе <code>localStorage</code>:</p>
+<ul>
+<li>скрывается или показывается контент;</li>
+<li>определяется доступ к админ-панели;</li>
+<li>выполняется логика “авторизован / не авторизован”.</li>
+</ul>
+<p>Теоретически это пример <strong>client-side state management</strong>.</p>
+<hr>
+<h2 id="19-html"><strong>1.9. Динамическое формирование HTML</strong></h2>
+<h3 id="191"><strong>1.9.1. Таблицы и списки</strong></h3>
+<p>Таблицы заявок создаются динамически:</p>
+<ul>
+<li>очищение <code>tbody</code>;</li>
+<li>создание <code>&lt;tr&gt;</code>;</li>
+<li>заполнение через <code>innerHTML</code>.</li>
+</ul>
+<p>Это позволяет:</p>
+<ul>
+<li>работать с любым объёмом данных;</li>
+<li>обновлять интерфейс без перезагрузки;</li>
+<li>реализовать фильтрацию и пагинацию.</li>
+</ul>
+<hr>
+<h3 id="192"><strong>1.9.2. Управление классами</strong></h3>
+<p>Используются методы:</p>
+<ul>
+<li><code>classList.add()</code>;</li>
+<li><code>classList.remove()</code>;</li>
+<li><code>className = ...</code>.</li>
+</ul>
+<p>Это применяется для:</p>
+<ul>
+<li>блокировки форм;</li>
+<li>отображения ошибок/успеха;</li>
+<li>управления анимациями.</li>
+</ul>
+<hr>
+<h2 id="110-"><strong>1.10. Реализация бизнес-правил на клиенте</strong></h2>
+<p>В JavaScript реализованы бизнес-ограничения:</p>
+<ul>
+<li>отзыв доступен <strong>только после завершения курса</strong>;</li>
+<li>админ может менять только допустимые статусы;</li>
+<li>пагинация не выходит за границы страниц;</li>
+<li>фильтры комбинируются логически.</li>
+</ul>
+<p>Теоретически:</p>
+<blockquote>
+<p>клиентская логика дополняет серверную, улучшая UX.</p>
+</blockquote>
+<hr>
+<h2 id="111"><strong>1.11. Фильтрация и пагинация данных</strong></h2>
+<p>В админ-панели используются:</p>
+<ul>
+<li>массивы (<code>allApps</code>, <code>filteredApps</code>);</li>
+<li><code>filter()</code>;</li>
+<li><code>slice()</code>.</li>
+</ul>
+<p>Это позволяет:</p>
+<ul>
+<li>не запрашивать сервер при каждом действии;</li>
+<li>мгновенно реагировать на ввод пользователя;</li>
+<li>снижать нагрузку на backend.</li>
+</ul>
+<hr>
+<h2 id="112"><strong>1.12. Таймеры и интервалы</strong></h2>
+<p>В <code>slider.js</code> используется:</p>
+<ul>
+<li><code>setInterval</code>;</li>
+<li><code>clearInterval</code>.</li>
+</ul>
+<p>Назначение:</p>
+<ul>
+<li>автоматическая смена слайдов;</li>
+<li>управление автопрокруткой;</li>
+<li>приостановка при взаимодействии пользователя.</li>
+</ul>
+<hr>
+<h2 id="113-iife"><strong>1.13. Изоляция кода и IIFE</strong></h2>
+<p><code>slider.js</code> оформлен как <strong>самовызывающаяся функция</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">})();</span>
+</code></pre></div>
+<p>Теоретически это:</p>
+<ul>
+<li>защита глобальной области видимости;</li>
+<li>изоляция компонента;</li>
+<li>примитивная модульность без сборщиков.</li>
+</ul>
+<hr>
+<h2 id="114"><strong>1.14. Поддержка мобильных устройств</strong></h2>
+<p>JavaScript учитывает:</p>
+<ul>
+<li>touch-события;</li>
+<li>отсутствие hover на мобильных;</li>
+<li>пассивные слушатели (<code>{ passive: true }</code>).</li>
+</ul>
+<p>Это повышает:</p>
+<ul>
+<li>производительность;</li>
+<li>корректность поведения на смартфонах.</li>
+</ul>
+<hr>
+<h2 id="115-accessibility"><strong>1.15. Доступность (Accessibility)</strong></h2>
+<p>JavaScript взаимодействует с элементами, имеющими:</p>
+<ul>
+<li><code>aria-label</code>;</li>
+<li><code>aria-live="polite"</code>;</li>
+<li><code>role="status"</code>.</li>
+</ul>
+<p>Это обеспечивает:</p>
+<ul>
+<li>озвучивание изменений интерфейса;</li>
+<li>доступность для скринридеров;</li>
+<li>соответствие базовым требованиям WCAG.</li>
+</ul>
+<hr>
+<h2 id="116"><strong>1.16. Ограничения текущей реализации</strong></h2>
+<p>С точки зрения теории важно отметить:</p>
+<ul>
+<li>нет модульной системы (ES modules);</li>
+<li>нет централизованного state-manager;</li>
+<li>роль администратора проверяется в основном на клиенте;</li>
+<li>нет JWT / session-based auth.</li>
+</ul>
+<p>Это <strong>нормально для учебного проекта</strong>, но должно быть осознано теоретически.</p>
+<hr>
+<h2 id="117-javascript"><strong>1.17. Итоговая роль JavaScript в проекте</strong></h2>
+<p>В данной системе JavaScript:</p>
+<ul>
+<li>реализует интерактивность;</li>
+<li>управляет формами и таблицами;</li>
+<li>обеспечивает связь с сервером;</li>
+<li>реализует бизнес-правила интерфейса;</li>
+<li>повышает удобство и отзывчивость ИС.</li>
+</ul>
+<p><strong>Без JavaScript проект превратился бы в набор статических HTML-страниц.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.image.zoom", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/js/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
